@@ -1,0 +1,12 @@
+package com.java.collections;
+
+import java.util.HashMap;
+
+public class HasMapExample {
+
+	public static void main(String[] args) {
+		Map<String, Integer> numberMap = new HashMap<>()
+
+	}
+
+}

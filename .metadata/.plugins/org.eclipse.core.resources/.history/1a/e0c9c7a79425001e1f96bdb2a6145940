@@ -1,0 +1,41 @@
+package com.java.collections;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListExample {
+
+	public static void main(String[] args) {
+		List<String> elementList = new ArrayList<String>();
+		elementList.add("element1");
+		elementList.add("element2");
+		elementList.add("element3");
+		elementList.add(null);
+		
+		System.out.println(elementList);
+		
+		System.out.println(elementList.get(3) + " " + elementList.get(2));
+		
+		// Create ArrayList from collection
+		List<Integer> first5PrimeNums = new ArrayList<>();
+		first5PrimeNums.add(2);
+		first5PrimeNums.add(3);
+		first5PrimeNums.add(5);
+		first5PrimeNums.add(7);
+		first5PrimeNums.add(11);
+		
+		List<Integer> first10PrimeNums = new ArrayList<>(first5PrimeNums);
+		
+		List<Integer> next5PrimeNums = new ArrayList<>();
+		next5PrimeNums.add(13);
+		next5PrimeNums.add(17);
+		next5PrimeNums.add(19);
+		next5PrimeNums.add(23);
+		next5PrimeNums.add(29);
+		
+		first10PrimeNums.addAll(1, next5PrimeNums);
+		
+		System.out.println(first10PrimeNums);
+	}
+
+}

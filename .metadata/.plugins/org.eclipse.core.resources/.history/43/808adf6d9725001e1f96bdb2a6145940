@@ -1,0 +1,92 @@
+package com.java.collections;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+
+public class ListExample {
+
+	public static void main(String[] args) {
+		List<String> elementList = new ArrayList<String>();
+		elementList.add("element1");
+		elementList.add("element2");
+		elementList.add("element3");
+		elementList.add(null);
+		
+//		System.out.println(elementList);
+//		
+//		System.out.println(elementList.get(3) + " " + elementList.get(2));
+//		
+		// Create ArrayList from collection
+		List<Integer> first5PrimeNums = new ArrayList<>();
+		first5PrimeNums.add(2);
+		first5PrimeNums.add(3);
+		first5PrimeNums.add(5);
+		first5PrimeNums.add(7);
+		first5PrimeNums.add(11);
+		
+		List<Integer> first10PrimeNums = new ArrayList<>(first5PrimeNums);
+		
+		List<Integer> next5PrimeNums = new ArrayList<>();
+		next5PrimeNums.add(13);
+		next5PrimeNums.add(17);
+		next5PrimeNums.add(19);
+		next5PrimeNums.add(23);
+		next5PrimeNums.add(29);
+		
+		first10PrimeNums.addAll(1, next5PrimeNums);
+		
+//		System.out.println(first10PrimeNums);
+		
+		// remove elements
+		first10PrimeNums.removeAll(first5PrimeNums);
+//		System.out.println(first10PrimeNums);
+		
+		// Iterate over list
+//		for(int index = 0; index < first5PrimeNums.size(); index++ )
+//		{
+//			System.out.println(first5PrimeNums.get(index));
+//		}
+//		System.out.println("");
+//		
+//		for( Integer num : next5PrimeNums )
+//		{
+//			System.out.println(num);
+//		}
+//		
+//		System.out.println("");
+//		
+//		for( ListIterator<Integer> itr = first10PrimeNums.listIterator(); itr.hasNext();)
+//		{
+//			System.out.println(itr.next());
+//		}
+//		
+//		System.out.println("");
+//		
+//		ListIterator<Integer> itr = first5PrimeNums.listIterator();
+//		while( itr.hasNext() )
+//		{
+//			System.out.println(itr.next());
+//		}
+		
+//		System.out.println("");
+//		
+//		next5PrimeNums.forEach( num -> { System.out.println(num); });
+//		
+//		System.out.println("");
+//		
+//		first5PrimeNums.stream().forEach( num -> { System.out.println(num); });
+		
+		// Sort and reverse
+		Collections.sort(first5PrimeNums);
+		System.out.println(first5PrimeNums);
+		
+		Collections.reverse(first5PrimeNums);
+		System.out.println(first5PrimeNums);
+		
+	}
+
+}

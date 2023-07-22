@@ -1,0 +1,18 @@
+package com.java.collections;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class HasMapExample {
+
+	public static void main(String[] args) {
+		Map<String, Integer> numberMap = new HashMap<>();
+		numberMap.put("One", 1);
+		numberMap.put("Two", 1);
+		numberMap.put("Three", 1);
+		numberMap.put("Four", 1);
+		numberMap.put("Five", 5);
+
+	}
+
+}
